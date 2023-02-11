@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hackathon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .container{
+    width:100%;
+    height:100vh;
+    background:rgb(206, 111, 111);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+    </style>
+  </head>
+  <body>
+    <div class="ngo">
+        <nav>
+          <h1>Rooting for a Good Cause</h1>
+            <ul>
+                <li><a href="home.html">About</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="donations.html">Donation</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Contact Us</h3>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your e-mail" required>
+            <input type="text" id="phone" placeholder="Enter your phone no." required>
+            <textarea id="message" rows="4" placeholder="Feel free to ask all your doubt"></textarea>
+            <button type="submit">Send</button> 
+        </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host:"smtp.gmail.com",
+                Username:"sinhakhushi1382003@gmail.com",
+                Password:"password",
+                To:'pravinkumarsinha185@gmail.com',
+                From:document.getElementById("email").value,
+                Subject:"NGO Donation",
+                Body:"Name: "+document.getElementById("name").value+"<br> Email:"+document.getElementById("email").value+"<br> Phone no: "+document.getElementById("phone").value+"<br> Message: "+document.getElementById("message").value
+            }).then(
+                message=>alert("Message sent successfully !")
+            );
+        }
+    </script>
+
+  </body>
+</html>
