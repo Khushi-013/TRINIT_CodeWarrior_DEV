@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Hackathon</title>
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+        <div class="ngo">
+            <nav>
+                <h1>Rooting for a Good Cause</h1>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+                <img src="profile.png" class="pic" onclick="toggleMenu()">
+
+                <div class="drop-down">
+                    <button class="dropbutton">Khushi Sinha</button>
+                    <div class="menu">
+
+                        <div class="info">
+                            <img src="profile.png">
+                            <h3>Khushi Sinha</h3>
+                        </div>
+
+                        <hr>
+                        <a href="#" class="link">
+                            <img src="user.png">
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="link">
+                            <img src="settings.png">
+                            <p>Settings & Privacy</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="link">
+                            <img src="help.png">
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="link">
+                            <img src="logout.png">
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+        
+        <script>
+            let menu=document.getElementById("menu");
+            function toggleMenu(){
+                menu.classList.toggle("open");
+            }
+        </script>
+    </body>
+</html>
