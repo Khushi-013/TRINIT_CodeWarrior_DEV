@@ -6,8 +6,9 @@
 }
 .ngo{
     width:100%;
-    min-height:100vh;
+    height:100px;
     color:#940d0d;
+    margin-top:20px;
 }
 nav{
     background:#a5db11;
